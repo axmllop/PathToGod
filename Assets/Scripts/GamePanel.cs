@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class GamePanel : MonoBehaviour
 {
+   
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
     Text txt_Score;
     Text txt_Diamond;
     Button btn_Play;
@@ -30,8 +36,8 @@ public class GamePanel : MonoBehaviour
     }
     private void OnDestroy()
     {
-        EventCenter.RemoveListener(EventDefine.ShowGamePanel,Show);
-        
+        EventCenter.RemoveListener(EventDefine.ShowGamePanel, Show);
+
     }
     void Show()
     {
@@ -53,6 +59,4 @@ public class GamePanel : MonoBehaviour
         btn_Pause.gameObject.SetActive(false);
         btn_Play.gameObject.SetActive(true);
     }
-    
-	
 }
